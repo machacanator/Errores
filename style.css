@@ -1,0 +1,424 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.html{
+    height:100%;
+}
+
+.body{   
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction:column;
+    align-items: center;
+    background-image: url("./images/background/fondoWeb.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+}
+
+.link{text-decoration: none;}
+
+.header{
+    width: calc(100% - 60px);
+    height:70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: chartreuse;
+    border: 10px;
+    border-color: black;
+    border-style: solid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    position:relative;
+    z-index:1;
+}
+
+.header::before{
+    content:'';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: red;
+    z-index:-1;
+    transform:scaleX(0);
+    transform-origin:bottom;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.header:hover::before, .header:focus::before{
+    transform:scaleX(1);
+}
+
+.card-list{ /*caben 2 cards*/
+    width:85%;
+    /*height:4900px;*/
+    height:300px;
+    margin-top: 0px;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    display:none;
+}
+
+.card{
+    width:90%;
+    height:200px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+.card__title{
+    font-family: "Anton";
+    font-size: 30px;
+    margin-bottom: 17px;
+}
+
+.info__height, .info__gender, .info__mass{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-right: 7%;
+}
+
+.info__gender{
+    
+}
+
+.info__mass{
+
+
+}
+
+.headerIcons{
+    width:15%;
+    height:90%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.headerSiteLogo{
+    width:40%;
+    height:90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.headerSiteLogo__Text{
+    width:100%;
+    height:100%;
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: contents;
+}
+
+.headerSiteLogo--adjustSiteLogoImage{
+    width:20%;
+    height:80%;
+}
+
+.headerIcons__menuIcon{
+    width: 10%; 
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+}
+
+.headerIcons__menuIcon--adjustMenuImage{
+    width:50%;
+    height:80%;
+}
+
+.headerIcons__loginIcon{
+    width: 20%; 
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+}
+
+.headerIcons__loginIcon--adjustLoginImage{
+    width:40%;
+    height:80%;
+    margin-left: 10px;
+}
+
+.headerIcons__loginIcon--setText{
+    width:100%;
+    height:100%;
+    margin-right: 20px;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    display: contents;
+}
+
+.headerIcons__menuIcon:hover::before, .headerIcons__menuIcon:focus::before{
+    transform: scaleX(0.89);
+}
+
+.headerIcons__loginIcon:hover::before, .headerIcons__loginIcon:focus::before{
+    transform: scaleX(0.9);
+}
+
+.headerIcons__menuIcon::before,.headerIcons__loginIcon::before{
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:-1;
+    background-color: white;
+    transform:scaleX(0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.headerIcons__menuIcon:hover::after,.headerIcons__loginIcon:hover::after{
+    content:'';
+    position:absolute;
+    top:-1px;
+    bottom:-1px;
+    right:0;
+    left:0;
+    border:solid 5px;
+    border-radius: 10%;
+    border-color: rgb(128, 25, 25);
+}
+
+.welcome{
+    width:60%;
+    height:30%;
+    margin-top: auto;
+    margin-bottom:auto;
+    background-color: white;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome__title{
+    font-family:"Anton", serif;
+    font-size: 20px;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+.welcome__description{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    display:flex;
+}
+
+.description-list{ /*caben 2 cards*/
+    width:85%;
+    height:800px;
+    margin-top: 0px;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    display:none;
+}
+
+.description-info{
+    width:100%;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description-info__row{
+    width:100%;
+    height:74px;
+    display:flex;
+    justify-content: center;
+}
+
+.description-info__edition-row{
+    width:100%;
+    height:100px;
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description-info__name{
+    width: 100%;
+    height:100px;
+    line-height: 100px;
+    font-family: "Anton";
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+    display:flex;
+}
+
+.description-info__height, .description-info__mass, .description-info__hair-color, .description-info__skin-color, .description-info__eye-color, .description-info__birth-year, .description-info__gender, .description-info__homeworld{  
+    width:33%;
+    height: 74px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 74px;
+    text-align: center;
+}
+
+.description-info__created, .description-info__edited, .description-info__url{
+    width:100%;
+    height:33.33%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 33px;
+}
+
+.description-list-extra{
+    width:100%;
+    height:100px;
+    margin-top: 7px;
+    margin-top: 7px;
+    background-color: white;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-list-extra__title{
+    width:100%;
+    height:20%;
+    font-family: "Anton";
+    font-size: 25px;
+    text-align: center;
+}
+
+.films-list, .species-list, .vehicles-list, .starships-list{
+    width:100%;
+    height:60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color:black;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position:absolute;
+    bottom:-150px;
+}
+
+.socialNetwork{
+    width:25%;
+    height:80%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.socialNetwork__Text{
+    width:100%;
+    height:100%;
+    font-size: 15px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    display: contents;
+}
+
+.socialNetwork__Icon{
+    width:16%;
+    height:55%;
+}
+
+
+
+@media only screen and (min-width: 576px){
+    .html,.body{
+        min-width: 567px;
+    }
+} /*Considero que el tamaño minimo de la ventana sera 567 px que es la pantalla de un móvil de el curso que estamos dando*/
+
+@media only screen and (min-width: 600px){
+    .headerIcons__loginIcon{
+        width:16%;
+    }
+    .card-list{
+        width:70%;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .headerIcons__loginIcon{
+        width:14%;
+    }
+
+    .card-list{
+        width:50%;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .headerIcons__loginIcon:hover::before, .headerIcons__loginIcon:focus::before{
+        transform: scaleX(0.87);
+    }
+    .headerIcons__loginIcon{
+        width:10%;
+    }
+    .card-list{
+        width:40%;
+        /*height: 4900px;*/
+    }
+
+    .card__title{font-size: 30px;}
+    .info__height, .info__genre, .info__mass{font-size: 20px;}
+
+    .footer{
+        height: 100px;
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .header{
+        height:100px;
+    }
+    .headerIcons__loginIcon--setText{
+        font-size: 30px;
+    }
+    .headerIcons__loginIcon:hover::before, .headerIcons__loginIcon:focus::before{
+        transform: scaleX(0.92);
+    }
+    
+    .footer{
+        height:150px;
+    }
+    .socialNetwork__Text{
+        font-size: 20px;
+    }
+}
